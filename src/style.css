@@ -24,6 +24,7 @@ main {
   padding: 15px;
   display: flex;
   gap: 2rem;
+  /* overflow-y: hidden; */
   /* align-items: center; */
 }
 
@@ -98,7 +99,7 @@ section.content {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  gap: 1.5rem;
+  gap: 1rem;
   /* width: 60%; */
   height: 100%;
 }
@@ -220,4 +221,56 @@ section.content {
 .chart-head p:nth-child(2) {
   font-size: 0.8rem;
 }
+
+.emails {
+  padding: 10px 20px;
+  overflow-y: hidden;
+}
+
+.emails > p {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.mail-list {
+  height: 100%;
+  overflow-y: scroll;
+  padding-bottom: 25px;
+}
+
+.mail {
+  border-top: 1px solid rgba(128, 128, 128, 0.151);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mail img {
+  border: 3px solid var(--purple);
+  display: block;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+}
+.mail p {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+/* .mail > div {
+  width: 20%;
+} */
+.subject {
+  width: 40%;
+}
+.name {
+  width: 20%;
+}
+.time {
+  width: 20%;
+  text-align: right;
+}
+
 /* PROFILE SECTION STYLING */
