@@ -18,7 +18,7 @@ h1 {
 }
 
 main {
-  background: rgb(236, 234, 234);
+  background: rgb(243, 243, 243);
   width: 100vw;
   height: 100vh;
   padding: 15px;
@@ -247,7 +247,8 @@ section.content {
   width: 100%;
 }
 
-.mail img {
+.mail img,
+img {
   border: 3px solid var(--purple);
   display: block;
   border-radius: 100px;
@@ -259,9 +260,6 @@ section.content {
   color: grey;
 }
 
-/* .mail > div {
-  width: 20%;
-} */
 .subject {
   width: 40%;
 }
@@ -274,3 +272,26 @@ section.content {
 }
 
 /* PROFILE SECTION STYLING */
+.profile-section {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+}
+
+.tool-bar,
+.profile-pic {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.tool-bar {
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
