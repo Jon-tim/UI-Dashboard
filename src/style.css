@@ -24,8 +24,6 @@ main {
   padding: 15px;
   display: flex;
   gap: 2rem;
-  /* overflow-y: hidden; */
-  /* align-items: center; */
 }
 
 /* NAV SECTION STYLING */
@@ -55,7 +53,7 @@ nav i {
 .nav-toggler {
   position: absolute;
   top: 70px;
-  right: -15%;
+  right: -10px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -296,6 +294,58 @@ img {
   width: 100%;
   justify-content: center;
 }
+
+.profile-pic {
+  position: relative;
+}
+
+.profile__dropdown {
+  position: absolute;
+  top: 45px;
+  right: -65px;
+  /* left: 0; */
+  width: 265px;
+  padding: 20px;
+}
+
+.profile__dropdown > p:nth-child(1) {
+  font-weight: 600;
+}
+
+.profile__dropdown > p:nth-child(2) {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+.profile__dropdown progress {
+  margin: 0.2rem 0;
+  width: 100%;
+}
+
+.profile__dropdown div {
+  text-align: center;
+}
+.profile__dropdown div p:nth-child(1) {
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.profile__dropdown div p:nth-child(2) {
+  font-size: 0.8rem;
+}
+
+.profile__dropdown div button {
+  margin-top: 0.6rem;
+  width: 100%;
+  background-color: var(--purple);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
 .to-do,
 .schedule {
   border-radius: 20px;
@@ -304,11 +354,9 @@ img {
 .to-dos,
 .schedule,
 .mail-list {
-  
   scrollbar-color: rgb(209, 208, 208) transparent;
   scrollbar-width: thin;
 }
-
 
 .to-do,
 .to-dos {
@@ -386,3 +434,8 @@ img {
   font-size: 0.65rem;
   color: grey;
 }
+
+.hide {
+  display: none;
+}
+
