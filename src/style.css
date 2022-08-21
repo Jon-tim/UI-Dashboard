@@ -107,7 +107,9 @@ section.content {
   background-color: #fff;
   border-radius: 15px;
 }
-
+.greeting {
+  margin-top: 0.5rem;
+}
 .greeting,
 .account-details {
   display: flex;
@@ -149,6 +151,37 @@ section.content {
 .card-text p {
   font-size: 0.8rem;
   width: 60%;
+}
+
+.dots {
+  position: relative;
+}
+
+.dot__info {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  box-shadow: 0 0 5px rgba(179, 179, 179, 0.685);
+}
+
+.dot__info > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: unset;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.dot__info > div:hover {
+  opacity: 0.7;
+}
+
+.dot__info div span {
+  font-size: 0.75rem;
 }
 
 .clients-details {
@@ -294,6 +327,31 @@ img {
   width: 100%;
   justify-content: center;
 }
+.tool-bar > i {
+  font-size: 1.4rem;
+}
+
+.tool-bar > i:nth-child(2),
+.tool-bar > i:nth-child(3) {
+  position: relative;
+}
+
+.tool-bar > i:nth-child(2)::after,
+.tool-bar > i:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50px;
+  background-color: #fc0f07;
+  border: 2px solid rgb(235, 235, 235);
+  right: 2px;
+  top: 1px;
+}
+
+.tool-bar > i:nth-child(3)::after {
+  right: -1px;
+}
 
 .profile-pic {
   position: relative;
@@ -435,7 +493,13 @@ img {
   color: grey;
 }
 
+.to-do__item:hover,
+.schedule__item:hover,
+.mail:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .hide {
   display: none;
 }
-
