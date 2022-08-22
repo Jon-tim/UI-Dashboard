@@ -385,6 +385,7 @@ img {
 
 .profile__dropdown {
   position: absolute;
+  z-index: 100;
   top: 45px;
   right: -65px;
   /* left: 0; */
@@ -400,10 +401,35 @@ img {
   margin-top: 0.2rem;
   font-size: 0.8rem;
 }
-.profile__dropdown progress {
-  margin: 0.2rem 0;
+
+progress {
+  /* RESETS */
+  border-radius: 50px;
   width: 100%;
+  margin: 0.6rem 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
 }
+
+/* WEBKIT BROWSERS - CHROME, OPERA AND SAFARI */
+progress::-webkit-progress-bar {
+  background-color: rgb(235, 235, 235);
+  border-radius: 50px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--purple);
+  border-radius: 50px;
+}
+
+/* MOZILLA FIREFOX */
+progress::-moz-progress-bar {
+  background-color: var(--purple);
+  border-radius: 50px;
+}
+/* --------------------- */
 
 .profile__dropdown div {
   text-align: center;
@@ -438,8 +464,31 @@ img {
 .to-dos,
 .schedule,
 .mail-list {
+  scroll-behavior: smooth;
+  scrollbar-color: rgb(209, 208, 208) transparent;
+  scrollbar-width: 5px;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(209, 208, 208) transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  background-color: rgb(209, 208, 208) transparent;
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
   scrollbar-color: rgb(209, 208, 208) transparent;
   scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(209, 208, 208);
+  border-radius: 50px;
 }
 
 .to-do,
